@@ -1,10 +1,8 @@
 import {
   apiUrl,
-  DELETE_POST,
   POSTS_LOADED_FAIL,
   POSTS_LOADED_SUCCESS,
   SET_SHOW_TOAST,
-  UPDATE_POST,
 } from "../../utils/constants";
 import axios from "axios";
 
@@ -93,6 +91,14 @@ export const deletePostAction = (postId) => {
       });
       if (result.data.success) {
         dispatch(getPostsAction());
+        dispatch({
+          type: SET_SHOW_TOAST,
+          showToast: {
+            show: true,
+            message: result.data.message,
+            type: result.data.success ? "success" : "danger",
+          },
+        });
       }
     } catch (error) {
       console.log(error);
