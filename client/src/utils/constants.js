@@ -1,8 +1,8 @@
 export const apiUrl =
   process.env.NODE_ENV !== "production"
     ? // ? "http://localhost:5000/api"
-      "https://git.heroku.com/peaceful-lowlands-51657.git/api"
-    : "https://git.heroku.com/peaceful-lowlands-51657.git/api";
+      "https://stormy-temple-16074.herokuapp.com/https://peaceful-lowlands-51657.herokuapp.com/api"
+    : "https://stormy-temple-16074.herokuapp.com/https://peaceful-lowlands-51657.herokuapp.com/api";
 
 export const LOCAL_STORAGE_TOKEN_NAME = "JustOne";
 
